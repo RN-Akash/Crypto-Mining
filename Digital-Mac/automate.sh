@@ -8,7 +8,7 @@ XMRIG_PATH="$SCRIPT_DIR/xmrig"
 
 # Duration (in seconds)
 RUN_DURATION=$((7200))   # 2 hours
-SLEEP_DURATION=$((1800)) # 1 hour
+SLEEP_DURATION=$((1800)) # 30 minutes
 
 echo "Starting xmrig run/pause cycle..."
 
@@ -22,6 +22,6 @@ while true; do
   echo "$(date): Stopping xmrig (PID: $XMRIG_PID)..."
   kill "$XMRIG_PID"
 
-  echo "$(date): Sleeping for 1 hour..."
+  echo "$(date): Sleeping for 30 minutes..."
   sleep "$SLEEP_DURATION"
 done
